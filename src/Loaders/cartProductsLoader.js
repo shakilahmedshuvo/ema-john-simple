@@ -6,8 +6,23 @@ const cartProductsLoader = async () => {
 
     // if cart data is in database, you have to use async await 
     const storeCart = getShoppingCart();
-    console.log(storeCart);
+    const savedCart = [];
 
-    return products;
+    console.log(storeCart);
+    for (const id in storeCart) {
+        const addedProduct = products.find(pd => pd.id === id);
+        if (addedProduct) {
+            const quantity = storeCart[id];
+            addedProduct.quantity = quantity;
+            savedCart.push(addedProduct);
+        }
+    }
+
+    // if you need to send two things 
+    // return [products, savedCart]
+    // another options
+    // return { products, cart: savedCart };
+
+    return savedCart;
 };
 export default cartProductsLoader;

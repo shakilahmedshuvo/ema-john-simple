@@ -2,7 +2,7 @@ import React from 'react';
 import Cart from '../Cart/Cart'
 import { useLoaderData } from 'react-router-dom';
 import ReviewItem from '../ReviewItem/ReviewItem';
-import './Ordera.css';
+import './Orders.css';
 
 const Orders = () => {
     const cart = useLoaderData();

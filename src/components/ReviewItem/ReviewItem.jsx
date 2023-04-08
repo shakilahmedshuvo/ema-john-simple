@@ -1,9 +1,11 @@
 import React from 'react';
+import './ReviewItem.css';
 
-const ReviewItem = ({product}) => {
+const ReviewItem = ({ product }) => {
+    const {id,img,price,name,quantity}=product;
     return (
-        <div>
-            <h2>Review Item</h2>
+        <div className='review-item'>
+            <img src={img} alt="" />
         </div>
     );
 };

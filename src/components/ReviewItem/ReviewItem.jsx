@@ -6,6 +6,11 @@ const ReviewItem = ({ product }) => {
     return (
         <div className='review-item'>
             <img src={img} alt="" />
+            <div className='review-details'>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
         </div>
     );
 };
